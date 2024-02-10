@@ -1,91 +1,102 @@
+/* New CSS for mobile responsiveness */
+@media only screen and (max-width: 768px) {
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    nav ul li ul {
+        position: static;
+        display: none;
+        background-color: transparent;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+    }
+    nav ul li:hover ul {
+        display: none;
+    }
+}
+
+/* Rest of your existing CSS */
 body {
     margin: 0;
     padding: 0;
-    background-image: url(ejemplo.jpg);
+    background-image: linear-gradient(
+
+        0deg,
+        rgb(0, 0, 0, 0.5),
+        rgb(0, 0, 0, 0.5)
+
+
+    ), url(ejemplo.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     min-height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    /* Añade las siguientes propiedades para hacer el diseño más responsivo */
-    grid-gap: 10px; /* Espacio entre las columnas */
-  }
-
-
-  .logo{
-
-      padding: 0;
-      margin: 0;
-      text-align: center;
-  }
-
-
-  .logo img{
-      
-      max-width: 150px; 
-      height: auto;
-
-  }
-
-  .titulo {
-      position: center;
-      background-color: blue;
-      color: white;
-      padding: 10px;
-       box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
-       border: 2px solid yellow; 
-      display: flex;
-      justify-content: center; 
-      align-items: center; 
-
+    font-family: Arial, sans-serif;
 }
 
+.logo {
+    text-align: center;
+}
 
+.logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.titulo {
+    text-align: center;
+    background-color: rgba(33, 150, 243, 0.8);
+    color: white;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(33, 150, 243, 0.8);
+}
+
+nav {
+    text-align: center;
+}
 
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  nav ul li {
-    margin-right: 30px;
-    margin-top: 50px;
-  }
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
 
 nav ul li a {
     text-decoration: none;
-    color: black; /* Color de texto por defecto */
-    padding: 30px;
+    color: black;
+    padding: 10px;
     border: 2px solid darkblue;
     border-radius: 5px;
-    background-color: white; /* Fondo del menú */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombras fuertes */
-    font-family: inherit;
-    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+    background-color: white;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #1558F3; /* Color de fondo al pasar el mouse */
-    color: white; /* Color de texto al pasar el mouse */
+    background-color: #1558F3;
+    color: white;
 }
 
-nav ul li a.active {
-    background-color: yellow; /* Color de fondo al hacer clic */
-}
-
+/* New CSS for dropdown menu */
 nav ul li ul {
     display: none;
     position: absolute;
-    background-color:rgb(241, 242, 136); /* Fondo del submenú */
-    padding: 25px;
-    border: 4px solid red; /* Borde del submenú */
+    background-color: rgba(33, 150, 243, 0.9); /* Adjusted blue with 90% opacity */
+    padding: 15px;
+    border: 4px solid rgba(33, 150, 243, 0.8); /* Adjusted blue with 80% opacity */
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombras fuertes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 nav ul li:hover ul {
@@ -93,7 +104,7 @@ nav ul li:hover ul {
 }
 
 nav ul li ul li {
-    margin-top: 12px; /* Espacio entre los elementos del submenú */
+    margin-top: 10px;
 }
 
 nav ul li ul li a {
@@ -102,93 +113,87 @@ nav ul li ul li a {
 }
 
 nav ul li ul li a:hover {
-    background-color: #1558F3; /* Color de fondo al pasar el mouse en el submenú */
-    color: white; /* Color de texto al pasar el mouse en el submenú */
+    background-color: #1558F3;
+    color: white;
 }
 
-
-
-.parrafo{
-
-    background:rgb(241, 242, 136);
+.parrafo {
+    background: rgba(255, 255, 255, 0.7);
     color: black;
-    padding: 40px;
-    width: 60%;
-    margin: 50px 0px 50px 20%;
-    font-family: Lucida Sans;
-    border-width: 5px;
-    border-color: red;
-    border-style: solid;
-    text-align: center;
-    line-height: 2em;
-
-
-
+    border: 5px solid rgba(33, 150, 243, 0.8);
 }
 
-
-.ejemplos{
-
-
-
-    max-width: 100%;
+.ejemplos {
+    width: 100%;
     height: auto;
-    margin: 10px 0px 10px 250px;
-    border-style: solid;
-    border-color: yellow;
-    border-width: 2px;
-    overflow: hidden;
-
-
+    display: block;
+    margin: 20px auto;
+    border: 2px solid yellow;
 }
 
-
-
-.pie{
-
+.pie {
     background: white;
     color: black;
     text-align: center;
-    border-style: solid;
-    border-color: black;
-    border-width: 2px;
+    border: 2px solid black;
     font-family: cursive;
-
-
-
+    padding: 10px;
 }
 
+/* New CSS for contact form */
+#contact {
+    background: rgba(255, 255, 255, 0.7); /* Blanco con opacidad al 70% */
+    padding: 20px;
+    border: 5px solid rgba(33, 150, 243, 0.8); /* Azul ajustado con opacidad al 80% */
+    border-radius: 10px;
+    margin-top: 20px;
+}
 
-.responsive {
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
     width: 100%;
-    max-width: 1200px; /* Ajusta el ancho máximo según tus necesidades */
-    margin: 0 auto;
-    padding: 0 20px; /* Agrega espacio en los bordes para mejorar la legibilidad */
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
 }
 
+button[type="submit"] {
+    background-color: #1558F3; /* Color azul */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
+button[type="submit"]:hover {
+    background-color: #0d47a1; /* Tono más oscuro de azul */
+}
 
-@media screen and (max-width: 768px) {
-    body {
-      grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas más pequeñas */
-    }
+summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #ff0000; /* Red color */
+    color: #ffffff; /* White text color */
+    padding: 10px 20px; /* Add padding to make it look like a button */
+    border-radius: 5px; /* Add rounded corners */
+    display: inline-block; /* Display as inline block to make it look like a button */
+    text-decoration: none; /* Remove default underline */
+}
 
-    .responsive {
-        padding: 0 10px; /* Reduce el espacio en los bordes para pantallas más pequeñas */
-    }
-    
-    nav ul li {
-        margin-right: 10px; /* Reducir el espacio entre los elementos del menú en pantallas pequeñas */
-    }
-    
-    .parrafo {
-        font-size: 14px; /* Reducir el tamaño de fuente del párrafo en pantallas pequeñas */
-    }
-    
-    .ejemplos {
-        margin: 10px 0; /* Ajustar el margen de las imágenes en pantallas más pequeñas */
-    }
-
-    
-
-  }
+.center {
+    text-align: center; /* Align center */
+    margin-top: 20px; /* Add some top margin */
+}
