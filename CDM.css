@@ -81,7 +81,7 @@ nav ul li a.active {
 nav ul li ul {
     display: none;
     position: absolute;
-    background-color: rgb(249, 255, 51); /* Fondo del submenú */
+    background-color:rgb(249, 255, 51); /* Fondo del submenú */
     padding: 25px;
     border: 4px solid red; /* Borde del submenú */
     border-radius: 5px;
