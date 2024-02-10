@@ -81,7 +81,7 @@ nav ul li a.active {
 nav ul li ul {
     display: none;
     position: absolute;
-    background-color:#f9ff33; /* Fondo del submenú */
+    background-color:#f1f288; /* Fondo del submenú */
     padding: 25px;
     border: 4px solid red; /* Borde del submenú */
     border-radius: 5px;
@@ -110,7 +110,7 @@ nav ul li ul li a:hover {
 
 .parrafo{
 
-    background:rgb(249, 255, 51);
+    background:#f1f288;
     color: black;
     padding: 40px;
     width: 60%;
