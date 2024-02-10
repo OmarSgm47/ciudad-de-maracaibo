@@ -1,13 +1,15 @@
-body{
-
-      margin: 0;
-      padding: 0;
-      background-image: url(ejemplo.jpg);
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      height: 100vh;     
-
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(ejemplo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    /* Añade las siguientes propiedades para hacer el diseño más responsivo */
+    grid-gap: 10px; /* Espacio entre las columnas */
   }
 
 
@@ -15,6 +17,7 @@ body{
 
       padding: 0;
       margin: 0;
+      text-align: center;
   }
 
 
@@ -38,19 +41,21 @@ body{
 
 }
 
+
+
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    align-items: center;
-}
-
-nav ul li {
-    margin-right: 100px ; /* Espacio entre los elementos del menú */
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  nav ul li {
+    margin-right: 30px;
     margin-top: 50px;
-
-}
+  }
 
 nav ul li a {
     text-decoration: none;
@@ -105,7 +110,7 @@ nav ul li ul li a:hover {
 
 .parrafo{
 
-    background: yellow;
+    background: rgb(255, 215, 0);
     color: black;
     padding: 40px;
     width: 60%;
@@ -126,13 +131,13 @@ nav ul li ul li a:hover {
 
 
 
-    width: 1400px;
-    height: 720px;
-    margin: 0px 0px 2px 250px;
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0px 10px 250px;
     border-style: solid;
     border-color: yellow;
     border-width: 2px;
-
+    overflow: hidden;
 
 
 }
@@ -152,3 +157,38 @@ nav ul li ul li a:hover {
 
 
 }
+
+
+.responsive {
+    width: 100%;
+    max-width: 1200px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: 0 auto;
+    padding: 0 20px; /* Agrega espacio en los bordes para mejorar la legibilidad */
+}
+
+
+
+@media screen and (max-width: 768px) {
+    body {
+      grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas más pequeñas */
+    }
+
+    .responsive {
+        padding: 0 10px; /* Reduce el espacio en los bordes para pantallas más pequeñas */
+    }
+    
+    nav ul li {
+        margin-right: 10px; /* Reducir el espacio entre los elementos del menú en pantallas pequeñas */
+    }
+    
+    .parrafo {
+        font-size: 14px; /* Reducir el tamaño de fuente del párrafo en pantallas pequeñas */
+    }
+    
+    .ejemplos {
+        margin: 10px 0; /* Ajustar el margen de las imágenes en pantallas más pequeñas */
+    }
+
+    
+
+  }
